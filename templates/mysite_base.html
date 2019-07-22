@@ -1,0 +1,36 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Said</title>
+     <link rel="stylesheet" href="{%static 'styles.css'%}">
+    <h1 href="{%url 'home:home'%}"><img src="{%static 'ball2.png'%}" alt="">Said's personal website...</h1>
+
+    <nav>
+    <ul>
+        <li>
+            <a href="{% url 'home:home' %}" class="button">Home </a>
+        </li>
+        <li>
+        <a href="{% url 'about:about' %}" class="button">About me</a>
+        </li>
+        <li>
+            <a href="{% url 'contact:contact' %}" class="button">Contact</a>
+        </li>
+        <li>
+            <a href="{% url 'photo:album' %}" class="button">Photos</a>
+             {% csrf_token%}
+        </li>
+        <li>
+             <a href="{% url 'blog:blog' %}" class="button">Blog</a>
+        </li>
+    </ul>
+</head>
+<body>
+<div class="wrapper">
+    {%block content%}
+    {%endblock%}
+</div>
+</body>
+</html>

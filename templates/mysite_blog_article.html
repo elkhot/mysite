@@ -1,0 +1,15 @@
+{% extends 'mysite_base.html' %}
+{% block content %}
+{% load static from staticfiles %}
+
+<div class="article_list">
+        <div class="article_details">
+            <img src="{{ article.thumb.url }}" />
+            <h2>{{ article.title }}</h2>
+            <h5>{{ article.body }}</h5>
+            <h3>{{ article.date }}</h3>
+            <p>{{ article.author.username }}</p>
+
+        </div>
+</div>
+{% endblock %}

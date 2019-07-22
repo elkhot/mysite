@@ -1,0 +1,27 @@
+{% extends 'mysite_base.html' %}
+{% block content %}
+{% load static from staticfiles %}
+
+
+        <div class="photo">
+            <a href="{%static '1.jpg'%}">
+<img src="{% static '1.jpg' %}" width="300px" height="250px">Egypt 1983
+</a>
+                    <a href="{%static '2.jpg'%}">
+<img src="{% static '2.jpg' %}" width="300px" height="250px">Egypt 1994
+</a>
+            <a href="{%static '8.jpg'%}">
+<img src="{% static '8.jpg' %}" width="300px" height="250px">Egypt 2005
+</a>        <a href="{%static '5.jpg'%}">
+<img src="{% static '5.jpg' %}" width="300px" height="250px">Egypt 2008
+</a>        <a href="{%static '4.jpg'%}">
+<img src="{% static '4.jpg' %}" width="300px" height="250px"Sweden 2011
+</a>        <a href="{%static '7.jpg'%}">
+<img src="{% static '7.jpg' %}" width="300px" height="250px">Spain 2012
+</a>        <a href="{%static '3.jpg'%}">
+<img src="{% static '3.jpg' %}" width="250px" height="250px">Sweden 2013
+</a>
+        </div>
+
+
+{% endblock %}
